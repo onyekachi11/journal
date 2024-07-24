@@ -14,7 +14,7 @@ import Hero3 from "./Hero3";
 import Hero4 from "./Hero4";
 
 import HeroEJH from "./HeroEJH";
-import HeroEJM from "./HeroEJM";
+// import HeroEJM from "./HeroEJM";
 // import HeroEJHS from "./HeroEJHS";
 // import HeroEJMS from "./HeroEJMS";
 // import HeroEJPH from "./HeroEJPH";
@@ -22,7 +22,7 @@ import HeroEJM from "./HeroEJM";
 // import HeroEJLM from "./HeroEJLM";
 // import HeroEJNHS from "./HeroEJNHS";
 // import HeroEJSRR from "./HeroEJSRR";
-import HeroEJHIV from "./HeroEJHIV";
+// import HeroEJHIV from "./HeroEJHIV";
 
 import Contact from "./Contact";
 import Commitment from "./Commitment";
@@ -33,8 +33,8 @@ import JournalsMain from "./JournalsMain";
 import Newsletter from "./Newsletter";
 import Footer from "./Footer";
 
-import HaematologyHero from "./HaematologyHero";
-import MedicineHero from "./MedicineHero";
+// import HaematologyHero from "./HaematologyHero";
+// import MedicineHero from "./MedicineHero";
 // import HealthSciencesHero from "./HealthSciencesHero";
 // import MedicalSciencesHero from "./MedicalSciencesHero";
 // import PublicHealthHero from "./PublicHealthHero";
@@ -42,7 +42,7 @@ import MedicineHero from "./MedicineHero";
 // import LabHero from "./LabHero";
 // import NursingScienceHero from "./NursingScienceHero";
 // import ResearchHero from "./ResearchHero";
-import HIVHero from "./HIVHero";
+// import HIVHero from "./HIVHero";
 import Sidebar from "./Sidebar";
 import Sidebar2 from "./Sidebar2";
 // import Login from "./Login";
@@ -265,8 +265,8 @@ export {
   Hero3,
   Hero4,
   HeroEJH,
-  HeroEJM,
-  HeroEJHIV,
+  // HeroEJM,
+  // HeroEJHIV,
   //   HeroEJHS,
   //   HeroEJI,
   //   HeroEJLM,
@@ -282,8 +282,8 @@ export {
   JournalsMain,
   Newsletter,
   Footer,
-  HaematologyHero,
-  MedicineHero,
+  // HaematologyHero,
+  // MedicineHero,
   //   HealthSciencesHero,
   //   MedicalSciencesHero,
   //   PublicHealthHero,
@@ -291,7 +291,7 @@ export {
   //   LabHero,
   //   NursingScienceHero,
   //   ResearchHero,
-  HIVHero,
+  // HIVHero,
   Sidebar,
   Sidebar2,
   //   Login,
