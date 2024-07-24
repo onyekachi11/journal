@@ -116,7 +116,7 @@ const Sidebar = ({ sideLinks }) => {
       <div className="w-full flex justify-between items-center py-10">
         <div className="flex flex-col items-center w-full">
           <ul className="list-none flex flex-col gap-5 w-[350px]">
-            {sideLinks.map((link) => (
+            {sideLinks?.map((link) => (
               <li
                 key={link.id}
                 className="grow4 text-[18px] px-6 py-3 border-textalt 
@@ -143,7 +143,7 @@ const Sidebar = ({ sideLinks }) => {
                   <div className="mt-2">
                     {link.links && link.links.length > 0 && (
                       <ul>
-                        {link.links.map((submenuItem, index) => (
+                        {link.links?.map((submenuItem, index) => (
                           <li key={index}>
                             <a
                               href={submenuItem.route}

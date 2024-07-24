@@ -67,7 +67,7 @@ const Navbar = () => {
         </Link>
 
         <div
-          className="flex items-center justify-center w-full hidden 
+          className="items-center justify-center w-full hidden 
         md:flex"
         >
           <ul className="list-none flex flex-row gap-16">
@@ -101,7 +101,7 @@ const Navbar = () => {
 
         {/* FOR MOBILE */}
 
-        <div
+        {/* <div
           className="md:hidden flex justify-end flex-1 items-center
         mt-3"
         >
@@ -163,7 +163,7 @@ const Navbar = () => {
             </ul>
 
             <button
-              className="bg-main text-[16px] py-2 px-4
+              className="bg-main py-2 px-4
               text-white rounded-[5px] mt-5 ss:text-[20px] text-[14px]"
               onClick={() => {
                 setToggle(!toggle);
@@ -173,7 +173,7 @@ const Navbar = () => {
               Our Newsletter
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

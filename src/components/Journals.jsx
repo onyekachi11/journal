@@ -4,10 +4,20 @@ import { SectionWrapper } from "../hoc";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 // import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-import { journals } from "../constants";
+// import { journals } from "../constants";
 import { BsArrowRightShort } from "react-icons/bs";
+import { data } from "../pages/data";
+import { Link } from "react-router-dom";
+data;
 
-const JournalCard = ({ index, title, icon, desc, route }) => {
+const JournalCard = ({
+  index,
+  description,
+  journalNamefull,
+  journalNameShort,
+  icon,
+  // route,
+}) => {
   return (
     <div className="xs:w-[320px] w-full grow3">
       <motion.div
@@ -15,7 +25,7 @@ const JournalCard = ({ index, title, icon, desc, route }) => {
         className="w-full p-[1px] cursor-pointer 
           shadow-lg hover:shadow-xl"
       >
-        <a href={route}>
+        <Link to={`/journals/${journalNameShort}`}>
           <div
             options={{ max: 45, scale: 1, speed: 450 }}
             className="bg-primaryalt p-1 md:pb-10 ss:pb-10 pb-8 md:gap-5 
@@ -24,7 +34,7 @@ const JournalCard = ({ index, title, icon, desc, route }) => {
           >
             <img
               src={icon}
-              alt={title}
+              alt={journalNamefull}
               className="w-30 h-30 object-contain rounded-t-[20px]"
             />
             <h3
@@ -32,7 +42,7 @@ const JournalCard = ({ index, title, icon, desc, route }) => {
               font-bold md:leading-[25px] ss:leading-[20px] leading-[16px] 
               text-center md:max-w-[270px]"
             >
-              {title}
+              {journalNamefull}
             </h3>
             <h3
               className="text-textalt md:text-[14px] ss:text-[14px] 
@@ -40,10 +50,10 @@ const JournalCard = ({ index, title, icon, desc, route }) => {
               leading-[17px] md:max-w-[290px] ss:max-w-[400px]
               max-w-[300px]"
             >
-              {desc}
+              {description}
             </h3>
           </div>
-        </a>
+        </Link>
       </motion.div>
     </div>
   );
@@ -82,8 +92,12 @@ const Journals = () => {
             justify-center w-full"
         >
           <div className="flex flex-wrap gap-12">
-            {journals.slice(0, 3).map((journal, index) => (
-              <JournalCard key={journal.title} index={index} {...journal} />
+            {data.map((journal, index) => (
+              <JournalCard
+                key={journal.journalNameShort}
+                index={index}
+                {...journal}
+              />
             ))}
           </div>
         </motion.div>

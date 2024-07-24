@@ -410,6 +410,120 @@ import { VscGitPullRequestNewChanges } from "react-icons/vsc";
 import { TiMessages } from "react-icons/ti";
 import { IoNewspaperOutline } from "react-icons/io5";
 
+export const normalSideLinks = [
+  {
+    id: "current",
+    title: "Current Issue",
+    links: [
+      // {
+      //   name: "Volume 2, Issue 6. (2024)",
+      //   route: "/journals/EJHS/VOL2ISS6",
+      // },
+    ],
+  },
+  {
+    id: "archives",
+    title: "Archives",
+    links: [
+      // {
+      //   name: "Volume 1 (2023)",
+      //   route: "/journals/EJHS/VOL1",
+      // },
+      // {
+      //   name: "Volume 2 (2024)",
+      //   route: "/journals/EJHS/VOL2",
+      // },
+    ],
+  },
+  {
+    id: "indexings",
+    title: "Indexings",
+    links: [
+      // {
+      //   name: "Google Scholar",
+      //   route: null,
+      // },
+      // {
+      //   name: "Research Gate",
+      //   route: null,
+      // },
+      // {
+      //   name: "Academia Edu",
+      //   route: null,
+      // },
+      // {
+      //   name: "ISI Indexing",
+      //   route: null,
+      // },
+      // {
+      //   name: "Cosmo Impact Factor",
+      //   route: null,
+      // },
+    ],
+  },
+  {
+    id: "editors",
+    title: "Editors",
+    links: [
+      // {
+      //   name: "Prof. Muhammad Akram",
+      //   school:
+      //     "Department of Eastern Medicine, Government College University, Faisalabad, Pakistan.",
+      //   profileLink: "https://www.researchgate.net/profile/Muhammad-Akram-88",
+      //   route: null,
+      // },
+      // {
+      //   name: "Dr. Rida Zainab",
+      //   school:
+      //     "Department of Eastern Medicine, Government College University, Faisalabad, Pakistan.",
+      //   profileLink: "https://www.researchgate.net/profile/Rida_Zainab5",
+      //   route: null,
+      // },
+    ],
+    special: true,
+  },
+  {
+    id: "frequency",
+    title: "Frequency: 12",
+    links: [
+      // {
+      //   name: "Each month of the year",
+      //   route: null,
+      // },
+    ],
+  },
+  {
+    id: "authors",
+    title: "Author's Instructions",
+    links: [
+      {
+        // name: "lorem ipsum",
+        // route: null,
+      },
+    ],
+  },
+  {
+    id: "article",
+    title: "Article Processing Charge",
+    links: [
+      {
+        // name: "lorem ipsum",
+        // route: null,
+      },
+    ],
+  },
+  {
+    id: "contact",
+    title: "Contact",
+    links: [
+      // {
+      //   name: "ejhs@epjournals.com",
+      //   route: "mailto:ejhs@epjournals.com",
+      // },
+    ],
+  },
+];
+
 export const navLinks = [
   {
     id: "home",

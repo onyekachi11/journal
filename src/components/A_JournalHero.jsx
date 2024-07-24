@@ -4,7 +4,12 @@ import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import { EJH } from "../assets";
 
-const A_JournalHero = ({ E_ISSN, heroText, heroNameShort, heroNameFull }) => {
+const A_JournalHero = ({
+  E_ISSN,
+  description,
+  journalNameShort,
+  journalNamefull,
+}) => {
   return (
     <section
       className="w-full md:min-h-[550px] ss:min-h-[300px] 
@@ -24,7 +29,7 @@ const A_JournalHero = ({ E_ISSN, heroText, heroNameShort, heroNameFull }) => {
                     text-[14px] md:leading-[28px] ss:leading-[24px] 
                     leading-[19px] md:text-justify ss:text-justify text-center"
           >
-            {heroText}
+            {description}
           </p>
         </motion.div>
       </div>
@@ -64,7 +69,8 @@ const A_JournalHero = ({ E_ISSN, heroText, heroNameShort, heroNameFull }) => {
           className="text-main md:text-[18px] ss:text-[17px] 
                     text-[15px] font-bold"
         >
-          {heroNameShort}: <span className="font-light">{heroNameFull}</span>
+          {journalNameShort}:{" "}
+          <span className="font-light">{journalNamefull}</span>
         </p>
 
         <p

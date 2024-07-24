@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { layout } from "../styles";
 import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import { BsArrowRightShort } from "react-icons/bs";
 
-const HeroEJH = () => {
+const HeroEJH = ({ journalNamefull }) => {
   return (
     <section className="w-full">
       <div className="w-full flex flex-col">
@@ -18,7 +19,7 @@ const HeroEJH = () => {
                 ss:text-[60px] text-[30px] tracking-tight text-center
                 md:leading-[90px] ss:leading-[65px] leading-[30px]"
           >
-            Elite Journal of Haematology
+            {journalNamefull}
           </h1>
 
           <div
@@ -36,7 +37,7 @@ const HeroEJH = () => {
               className="md:text-[30px] 
                   ss:text-[30px] text-[22px] text-white"
             />
-            <p>Elite Journal of Haematology</p>
+            <p>{journalNamefull}</p>
           </div>
         </motion.div>
       </div>

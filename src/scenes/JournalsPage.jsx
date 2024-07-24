@@ -7,7 +7,7 @@ import {
 } from "../components";
 
 import { Helmet } from "react-helmet";
-// import { hero2 } from "../assets";
+import { hero3 } from "../assets";
 
 const JournalsPage = () => {
   return (
@@ -28,7 +28,7 @@ const JournalsPage = () => {
           ss:top-[6rem] top-[4.8rem]"
         >
           <img
-            src={""}
+            src={hero3}
             alt="hero3"
             className="w-[120rem] md:h-[300px] ss:h-[250px]
             h-[150px]"

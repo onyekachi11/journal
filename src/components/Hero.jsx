@@ -47,7 +47,7 @@ const Hero = () => {
                 <button
                   className="bg-main grow md:text-[16px] 
                   ss:text-[16px] text-[14px] md:py-3 ss:py-3 py-2 
-                  md:px-14 ss:px-14 px-6 text-white rounded-full
+                  md:px-14 ss:px-14 px-6 text-white rounded-sm
                   font-medium border-none"
                 >
                   Learn More
@@ -59,7 +59,7 @@ const Hero = () => {
                   className="border-[1px] grow2 border-main 
                   md:text-[16px] ss:text-[16px] text-[14px] md:py-3 
                   ss:py-3 py-2 md:px-14 ss:px-14 px-6 text-main 
-                  rounded-full font-medium"
+                  rounded-sm font-medium"
                 >
                   Get in Touch
                 </button>

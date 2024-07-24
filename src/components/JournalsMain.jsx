@@ -4,14 +4,15 @@ import { useState, useEffect } from "react";
 import { SectionWrapper } from "../hoc";
 import { motion } from "framer-motion";
 // import { fadeIn } from '../utils/motion';
-import { journals } from "../constants";
+// import { journals } from "../constants";
+import { data } from "../pages/data";
+import { Link } from "react-router-dom";
 
 const JournalCard = ({
-  // index,
-  title,
   icon,
-  desc,
-  route,
+  description,
+  journalNamefull,
+  journalNameShort,
 }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -32,7 +33,7 @@ const JournalCard = ({
           rounded-lg bg-primaryalt"
       >
         {isMobile ? (
-          <a href={route}>
+          <Link to={`/journals/${journalNameShort}`}>
             <div
               options={{ max: 45, scale: 1, speed: 450 }}
               className="p-5 md:gap-8 ss:gap-6 gap-5 flex justify-evenly 
@@ -40,7 +41,7 @@ const JournalCard = ({
             >
               <img
                 src={icon}
-                alt={title}
+                alt={journalNamefull}
                 className="md:w-[250px] ss:w-[300px] h-auto 
                     object-contain rounded-lg"
               />
@@ -51,7 +52,7 @@ const JournalCard = ({
                     text-[18px] font-bold md:leading-[28px] 
                     ss:leading-[25px] leading-[22px]"
                 >
-                  {title}
+                  {journalNamefull}
                 </h3>
 
                 <div className="flex">
@@ -66,7 +67,7 @@ const JournalCard = ({
                     text-[14px] md:leading-[18px] ss:leading-[18px]
                     leading-[17px] text-justify"
                 >
-                  {desc}
+                  {description}
                 </h3>
 
                 <div className="md:block hidden">
@@ -83,7 +84,7 @@ const JournalCard = ({
                 </div>
               </div>
             </div>
-          </a>
+          </Link>
         ) : (
           <div
             options={{ max: 45, scale: 1, speed: 450 }}
@@ -92,7 +93,7 @@ const JournalCard = ({
           >
             <img
               src={icon}
-              alt={title}
+              alt={journalNamefull}
               className="md:w-[250px] ss:w-[300px] h-auto 
                     object-contain rounded-lg"
             />
@@ -103,7 +104,7 @@ const JournalCard = ({
                     text-[18px] font-bold md:leading-[28px] 
                     ss:leading-[25px] leading-[22px]"
               >
-                {title}
+                {journalNamefull}
               </h3>
 
               <div className="flex">
@@ -118,11 +119,11 @@ const JournalCard = ({
                     text-[14px] md:leading-[18px] ss:leading-[18px]
                     leading-[17px] text-justify"
               >
-                {desc}
+                {description}
               </h3>
 
               <div className="md:block hidden">
-                <a href={route}>
+                <Link to={`/journals/${journalNameShort}`}>
                   <button
                     className="grow md:text-[12px] 
                             ss:text-[14px] md:py-1.5 ss:py-1.5 
@@ -133,7 +134,7 @@ const JournalCard = ({
                   >
                     Read More
                   </button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -146,20 +147,25 @@ const JournalCard = ({
 const Journals = () => {
   return (
     <section
-      className="md:min-h-[1800px] ss:min-h-[3000px] min-h-[5750px] 
-    flex items-center"
+      //   className="md:min-h-[1800px] ss:min-h-[3000px] min-h-[5750px]
+      // flex items-center"
+      className="mt-10  flex items-center"
     >
       <div
-        className="items-center w-full flex flex-col md:mt-28 
-        ss:mt-20 mt-20"
+        className="items-center w-full flex flex-col md:mt-28
+      ss:mt-20 mt-20"
       >
         <motion.div
           className="flex items-center flex-col relative 
             justify-center w-full"
         >
           <div className="grid grid-cols-2 md:gap-12 ss:gap-6 gap-10">
-            {journals.map((journal, index) => (
-              <JournalCard key={journal.title} index={index} {...journal} />
+            {data.map((journal, index) => (
+              <JournalCard
+                key={journal.journalNameShort}
+                index={index}
+                {...journal}
+              />
             ))}
           </div>
         </motion.div>

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-// import { arrow, arrowright, info } from "../assets";
+import { arrow, arrowright, info } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -127,7 +127,7 @@ const Sidebar2 = ({ sideLinks }) => {
       <div className="w-full flex justify-between items-center">
         <div className="flex flex-col items-center w-full pb-10">
           <ul className="list-none flex flex-col gap-4 w-full">
-            {sideLinks.map((link) => (
+            {sideLinks?.map((link) => (
               <li
                 key={link.id}
                 className="text-[15px] px-5 py-2 border-textalt
@@ -141,19 +141,18 @@ const Sidebar2 = ({ sideLinks }) => {
                   {link.title}
                   <span>
                     <img
-                      //   src={arrow}
-                      src={""}
+                      src={arrow}
                       alt={link.title}
                       className="ss:h-[5px] h-[5px] w-auto"
                     />
                   </span>
                 </div>
 
-                {expandedItem === link.id && (
+                {expandedItem === link?.id && (
                   <div className="mt-2">
                     {link.links && link.links.length > 0 && (
                       <ul>
-                        {link.links.map((submenuItem, index) => (
+                        {link?.links?.map((submenuItem, index) => (
                           <li key={index}>
                             <button
                               className="block text-main ss:py-[5px] py-[4px] 
@@ -174,8 +173,7 @@ const Sidebar2 = ({ sideLinks }) => {
 
                                 {link.special && (
                                   <img
-                                    // src={info}
-                                    src={""}
+                                    src={info}
                                     alt="info"
                                     className="h-[13px] w-auto"
                                     onClick={(e) => {
@@ -217,8 +215,7 @@ const Sidebar2 = ({ sideLinks }) => {
               >
                 Submit Manuscript
                 <img
-                  //   src={arrowright}
-                  src={""}
+                  src={arrowright}
                   alt="submit"
                   className="ss:h-[10px] h-[10px] w-auto"
                 />
