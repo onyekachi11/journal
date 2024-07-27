@@ -12,8 +12,6 @@ const VolumeIssues = ({ journalDetails }) => {
     .find((value) => value.id === "archives")
     .data.find((values) => values.id === vol);
 
-  console.log(volume?.volumeData);
-
   return (
     <section className="min-h-[auto] flex items-center">
       <div className="items-center w-full flex">

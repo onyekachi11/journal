@@ -106,10 +106,6 @@ const Publication = ({ pages, abstract, title, authors, route }) => {
 const IssuePubs = ({ issueDetails }) => {
   const isMobile = window.innerWidth <= 620;
 
-  //   const { journalName, vol, issuePubs } = useParams();
-
-  console.log(issueDetails.issue);
-
   const [currentPage, setCurrentPage] = useState(() => {
     const savedPage = parseInt(localStorage.getItem("currentPage"));
     return isNaN(savedPage) ? 1 : savedPage;

@@ -12,8 +12,6 @@ import {
 } from "../components";
 
 import styles from "../styles";
-// eslint-disable-next-line no-unused-vars
-import { ejhSideLinks, normalSideLinks } from "../constants";
 
 import { hero3 } from "../assets";
 import { Helmet } from "react-helmet";
@@ -27,13 +25,13 @@ const A_journalPageContainer = () => {
   );
 
   console.log(
-    journalDetails.normalSideLinks
+    journalDetails?.journalSideLinks
       .map((item) => item)
       .find((value) => value.id === "archives")
       .data.find((values) => values.id === vol)
   );
 
-  const issuesData = journalDetails.normalSideLinks
+  const issuesData = journalDetails?.journalSideLinks
     .map((item) => item)
     .find((value) => value.id === "archives")
     .data.find((values) => values.id === vol)
@@ -44,7 +42,7 @@ const A_journalPageContainer = () => {
     journalNamefull,
     journalNameShort,
     description,
-    normalSideLinks,
+    journalSideLinks,
   } = journalDetails;
 
   return (
@@ -81,7 +79,7 @@ const A_journalPageContainer = () => {
         md:pt-28 ss:pt-28 pt-28 hidden md:flex`}
         >
           <div className="md:mr-4 mt-[30px] flex-1">
-            <Sidebar sideLinks={normalSideLinks} />
+            <Sidebar sideLinks={journalSideLinks} />
           </div>
 
           <div className="md:ml-20">
@@ -109,14 +107,14 @@ const A_journalPageContainer = () => {
                 description={description}
               />
             ) : journalName && issuePubs == undefined ? (
-              <VolumeIssues journalDetails={journalDetails.normalSideLinks} />
+              <VolumeIssues journalDetails={journalDetails.journalSideLinks} />
             ) : journalName && issuePubs ? (
               <IssuePubs issueDetails={issuesData} />
             ) : null}
           </div>
 
           <div className="">
-            <Sidebar2 sideLinks={normalSideLinks} />
+            <Sidebar2 sideLinks={journalSideLinks} />
           </div>
         </div>
       </div>

@@ -83,8 +83,7 @@ const Modal = ({ onClose, name, school, profileLink }) => {
 
 const Sidebar2 = ({ sideLinks }) => {
   const navigate = useNavigate();
-  const { journalName, vol } = useParams();
-  console.log(journalName, vol);
+  const { journalName } = useParams();
 
   const [expandedItem, setExpandedItem] = useState(null);
 
@@ -167,6 +166,8 @@ const Sidebar2 = ({ sideLinks }) => {
                                   submenuItem.email.startsWith("mailto:")
                                 ) {
                                   window.location.href = submenuItem.email;
+                                } else if (submenuItem.route) {
+                                  navigate(submenuItem.route);
                                 } else if (submenuItem.id) {
                                   handleSubItemClick(submenuItem.id);
                                 }
