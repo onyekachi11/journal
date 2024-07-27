@@ -5,6 +5,8 @@ import NavbarAlt3 from "./NavbarAlt3";
 import NavbarPages from "./NavbarPages";
 import A_JournalHero from "./A_JournalHero";
 import A_journalPageContainer from "./A_journalPageContainer";
+import VolumeIssues from "./VolumeIssues";
+import IssuePubs from "./IssuePubs";
 // import NavbarAdmin from "./NavbarAdmin";
 // import NavbarAdminLogin from "./NavbarAdminLogin";
 
@@ -258,6 +260,8 @@ export {
   NavbarPages,
   A_JournalHero,
   A_journalPageContainer,
+  VolumeIssues,
+  IssuePubs,
   //   NavbarAdmin,
   //   NavbarAdminLogin,
   Hero,

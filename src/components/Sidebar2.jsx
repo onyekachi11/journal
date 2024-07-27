@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { arrow, arrowright, info } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { motion, AnimatePresence } from "framer-motion";
+import { useParams } from "react-router-dom";
 
 const Modal = ({ onClose, name, school, profileLink }) => {
   const modalRef = useRef(null);
@@ -82,6 +83,9 @@ const Modal = ({ onClose, name, school, profileLink }) => {
 
 const Sidebar2 = ({ sideLinks }) => {
   const navigate = useNavigate();
+  const { journalName, vol } = useParams();
+  console.log(journalName, vol);
+
   const [expandedItem, setExpandedItem] = useState(null);
 
   const [modalInfo, setModalInfo] = useState(null);
@@ -98,8 +102,8 @@ const Sidebar2 = ({ sideLinks }) => {
     setExpandedItem(expandedItem === link.id ? null : link.id);
   };
 
-  const handleSubItemClick = (route) => {
-    navigate(route);
+  const handleSubItemClick = (vol) => {
+    navigate(`/journals/${journalName}/${vol}`);
   };
 
   const handleModalOpen = (info) => {
@@ -150,21 +154,21 @@ const Sidebar2 = ({ sideLinks }) => {
 
                 {expandedItem === link?.id && (
                   <div className="mt-2">
-                    {link.links && link.links.length > 0 && (
+                    {link.data && link.data.length > 0 && (
                       <ul>
-                        {link?.links?.map((submenuItem, index) => (
+                        {link?.data?.map((submenuItem, index) => (
                           <li key={index}>
                             <button
                               className="block text-main ss:py-[5px] py-[4px] 
                               font-medium"
                               onClick={() => {
                                 if (
-                                  submenuItem.route &&
-                                  submenuItem.route.startsWith("mailto:")
+                                  submenuItem.email &&
+                                  submenuItem.email.startsWith("mailto:")
                                 ) {
-                                  window.location.href = submenuItem.route;
-                                } else if (submenuItem.route) {
-                                  handleSubItemClick(submenuItem.route);
+                                  window.location.href = submenuItem.email;
+                                } else if (submenuItem.id) {
+                                  handleSubItemClick(submenuItem.id);
                                 }
                               }}
                             >

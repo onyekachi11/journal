@@ -122,7 +122,18 @@ const App = () => {
           <Route path="/journals" element={<JournalsPage />} />
           <Route path="/contact" element={<ContactPage />} />
 
-          <Route path="/journals/:name" element={<A_journalPageContainer />} />
+          <Route
+            path="/journals/:journalName"
+            element={<A_journalPageContainer />}
+          />
+          <Route
+            path="/journals/:journalName/:vol"
+            element={<A_journalPageContainer />}
+          />
+          <Route
+            path="/journals/:journalName/:vol/:issuePubs"
+            element={<A_journalPageContainer />}
+          />
 
           {/* 
           <Route path="/journals/EJPH/Vol2/Vol2Iss1" element={<Vol2Iss1 />} />

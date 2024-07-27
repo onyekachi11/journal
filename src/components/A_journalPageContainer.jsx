@@ -3,11 +3,12 @@ import {
   HeroEJH,
   Newsletter,
   Footer,
-  // HaematologyHero,
   Sidebar,
   Sidebar2,
   NavbarPages,
   A_JournalHero,
+  VolumeIssues,
+  IssuePubs,
 } from "../components";
 
 import styles from "../styles";
@@ -20,8 +21,23 @@ import { data } from "../pages/data";
 import { useParams } from "react-router-dom";
 
 const A_journalPageContainer = () => {
-  const { name } = useParams();
-  const journalDetails = data?.find((data) => data.journalNameShort === name);
+  const { journalName, vol, issuePubs } = useParams();
+  const journalDetails = data?.find(
+    (data) => data.journalNameShort === journalName
+  );
+
+  console.log(
+    journalDetails.normalSideLinks
+      .map((item) => item)
+      .find((value) => value.id === "archives")
+      .data.find((values) => values.id === vol)
+  );
+
+  const issuesData = journalDetails.normalSideLinks
+    .map((item) => item)
+    .find((value) => value.id === "archives")
+    .data.find((values) => values.id === vol)
+    ?.volumeData.find((data) => data.id === issuePubs);
 
   const {
     E_ISSN,
@@ -70,23 +86,33 @@ const A_journalPageContainer = () => {
 
           <div className="md:ml-20">
             {/* <HaematologyHero /> */}
-            <A_JournalHero
-              E_ISSN={E_ISSN}
-              journalNameShort={journalNameShort}
-              journalNamefull={journalNamefull}
-              description={description}
-            />
+            {journalName && vol == undefined ? (
+              <A_JournalHero
+                E_ISSN={E_ISSN}
+                journalNameShort={journalNameShort}
+                journalNamefull={journalNamefull}
+                description={description}
+              />
+            ) : journalName && vol ? (
+              <VolumeIssues vol={vol} />
+            ) : null}
           </div>
         </div>
 
         <div className=" ss:pt-28 pt-28 md:hidden flex flex-col">
           <div className="">
-            <A_JournalHero
-              E_ISSN={E_ISSN}
-              journalNameShort={journalNameShort}
-              journalNamefull={journalNamefull}
-              description={description}
-            />
+            {journalName && vol == undefined ? (
+              <A_JournalHero
+                E_ISSN={E_ISSN}
+                journalNameShort={journalNameShort}
+                journalNamefull={journalNamefull}
+                description={description}
+              />
+            ) : journalName && issuePubs == undefined ? (
+              <VolumeIssues journalDetails={journalDetails.normalSideLinks} />
+            ) : journalName && issuePubs ? (
+              <IssuePubs issueDetails={issuesData} />
+            ) : null}
           </div>
 
           <div className="">
