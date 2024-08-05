@@ -5,7 +5,8 @@ import {
   Footer,
   Sidebar,
   Sidebar2,
-  NavbarPages,
+  // NavbarPages,
+  Navbar,
   A_JournalHero,
   VolumeIssues,
   IssuePubs,
@@ -21,14 +22,15 @@ import { useParams } from "react-router-dom";
 const A_journalPageContainer = () => {
   const { journalName, vol, issuePubs } = useParams();
   const journalDetails = data?.find(
-    (data) => data.journalNameShort === journalName
+    (datas) => datas?.journalNameShort === journalName
   );
 
   console.log(
-    journalDetails?.journalSideLinks
-      .map((item) => item)
-      .find((value) => value.id === "archives")
-      .data.find((values) => values.id === vol)
+    journalDetails &&
+      journalDetails?.journalSideLinks
+        .map((item) => item)
+        .find((value) => value.id === "archives")
+        .data.find((values) => values.id === vol)
   );
 
   const issuesData = journalDetails?.journalSideLinks
@@ -48,14 +50,14 @@ const A_journalPageContainer = () => {
   return (
     <div className="font-instrument-sans">
       <Helmet>
-        <title>{`${journalNamefull} | Elite Press Journals`}</title>
+        <title>{`${journalNamefull} | Lifeline Journals`}</title>
         <meta
           name="description"
-          content="Get on a journey into the intricate world of blood-related disorders. EJH is your guide to exploring the forefront of haematological research, unraveling the complexities of hematopoiesis, coagulation and the latest therapeutic interventions."
+          content="Get on a journey into the intricate world of blood-related disorders. Lifeline is your guide to exploring the forefront of haematological research, unraveling the complexities of hematopoiesis, coagulation and the latest therapeutic interventions."
         />
       </Helmet>
 
-      <NavbarPages />
+      <Navbar />
       <div
         className="relative flex items-center justify-center w-full 
       md:max-h-[450px] ss:max-h-[300px] max-h-[200px] md:top-[6rem] 

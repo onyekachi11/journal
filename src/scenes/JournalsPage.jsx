@@ -1,10 +1,4 @@
-import {
-  NavbarAlt2,
-  Hero3,
-  JournalsMain,
-  Newsletter,
-  Footer,
-} from "../components";
+import { Navbar, Hero3, JournalsMain, Newsletter, Footer } from "../components";
 
 import { Helmet } from "react-helmet";
 import { hero3 } from "../assets";
@@ -21,7 +15,7 @@ const JournalsPage = () => {
       </Helmet>
 
       <div>
-        <NavbarAlt2 />
+        <Navbar />
         <div
           className="relative flex items-center justify-center w-full 
           md:max-h-[450px] ss:max-h-[300px] max-h-[200px] md:top-[6rem] 

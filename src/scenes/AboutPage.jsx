@@ -1,5 +1,5 @@
 import {
-  NavbarAlt,
+  Navbar,
   Hero2,
   AboutMain,
   Commitment,
@@ -21,7 +21,7 @@ const AboutPage = () => {
         />
       </Helmet>
 
-      <NavbarAlt />
+      <Navbar />
       <div
         className="relative flex items-center justify-center w-full 
       md:max-h-[450px] ss:max-h-[300px] max-h-[200px] md:top-[6rem] 

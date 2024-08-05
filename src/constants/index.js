@@ -22,10 +22,10 @@ export const navLinks = [
     route: "/journals",
   },
   {
-    id: "",
+    id: "contact",
     title: "Contact Us",
     route: "/contact",
-    special: true,
+    // special: true,
   },
 ];
 

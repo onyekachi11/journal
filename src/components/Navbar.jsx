@@ -19,6 +19,9 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
+      if (isScrolled) {
+        setToggle(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -26,7 +29,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isScrolled]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -50,7 +53,7 @@ const Navbar = () => {
     >
       <div
         className="w-full flex justify-between items-center 
-      max-w-[82rem] mx-auto"
+      max-w-[82rem] mx-auto "
       >
         <Link
           to="/"
@@ -68,7 +71,7 @@ const Navbar = () => {
 
         <div
           className="items-center justify-center w-full hidden 
-        md:flex"
+        md:flex "
         >
           <ul className="list-none flex flex-row gap-16">
             {navLinks.map((link) => (
@@ -85,7 +88,9 @@ const Navbar = () => {
                   }
                 }}
               >
-                <a href={`#${link.id}`}>{link.title}</a>
+                <Link to={`${link.route}`}>
+                  <p>{link.title}</p>
+                </Link>
               </li>
             ))}
           </ul>
@@ -101,11 +106,11 @@ const Navbar = () => {
 
         {/* FOR MOBILE */}
 
-        {/* <div
-          className="md:hidden flex justify-end flex-1 items-center
+        <div
+          className="md:hidden flex justify-end flex-1 items-center 
         mt-3"
         >
-          <div className="flex items-center z-20">
+          <div className="flex items-center z-20 ">
             {toggle ? (
               <BsX
                 size={40}
@@ -125,55 +130,64 @@ const Navbar = () => {
 
           <div
             ref={menuRef}
-            className={`p-6 ss:mt-28 mt-24 bg-primaryalt absolute top-0 right-0 
-            z-10 flex-col w-full shadow-xl
-            ${
-              toggle
-                ? "menu-slide-enter menu-slide-enter-active"
-                : "menu-slide-exit menu-slide-exit-active"
-            }`}
+            className={`${
+              toggle &&
+              "ss:mt-0 mt-0 bg-black/50 absolute top-0 right-0 z-10 flex-col w-[100%] h-screen shadow-xl"
+            } 
+               `}
           >
-            <ul
-              className="list-none flex justify-end 
-            flex-col"
+            <div
+              className={` w-[60%] bg-primaryalt p-6 h-screen absolute top-0 right-0
+               ${
+                 toggle
+                   ? "menu-slide-enter menu-slide-enter-active"
+                   : "menu-slide-exit menu-slide-exit-active"
+               }`}
             >
-              {navLinks.map((link, index) => (
-                <li
-                  key={link.id}
-                  className={`${
-                    active === link.title ? "text-secondary" : "text-primary"
-                  } font-medium cursor-pointer ss:text-[20px] text-[17px] 
+              <ul
+                className="list-none flex justify-end mt-20 gap-8
+            flex-col"
+              >
+                {navLinks.map((link, index) => (
+                  <li
+                    key={link.id}
+                    className={`${
+                      active === link.title ? "text-secondary" : "text-primary"
+                    } font-medium cursor-pointer ss:text-[20px] text-[17px] 
                   w-full
                   ${
                     index !== navLinks.length - 1
                       ? "border-b-[1px] pb-1.5 pt-1.5"
                       : "pt-1.5"
                   }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(link.title);
-                    if (link.special) {
-                      navigate(link.route);
-                    }
-                  }}
-                >
-                  <a href={`#${link.id}`}>{link.title}</a>
-                </li>
-              ))}
-            </ul>
+                    onClick={() => {
+                      setToggle(!toggle);
+                      setActive(link.title);
+                      if (link.special) {
+                        navigate(link.route);
+                      }
+                    }}
+                  >
+                    <Link to={`${link.route}`}>
+                      <p>{link.title}</p>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
 
-            <button
-              className="bg-main py-2 px-4
-              text-white rounded-[5px] mt-5 ss:text-[20px] text-[14px]"
-              onClick={() => {
-                setToggle(!toggle);
-                scrollToSection("newsletter");
-              }}
-            >
-              Our Newsletter
-            </button>
+              <button
+                className="bg-main py-2 px-4 
+              text-white rounded-[5px] mt-10 ss:text-[20px] text-[14px]"
+                onClick={() => {
+                  setToggle(!toggle);
+                  scrollToSection("newsletter");
+                }}
+              >
+                Our Newsletter
+              </button>
+            </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </nav>
   );

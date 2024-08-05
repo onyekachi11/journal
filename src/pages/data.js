@@ -1,6 +1,8 @@
 import { EJH } from "../assets";
+// import { useParams } from "react-router-dom";
 
-// const params = useParams()
+// const params = useParams();
+// console.log(params);
 
 //ARCHIVE DATA STRUCTURE
 const archiveData = [
@@ -100,7 +102,8 @@ export const journalSideLinks = [
     data: [
       {
         name: `${lastVolume.name}, ${lastVolumeData.name}`,
-        route: `/journals/EJH/${lastVolume.id}/${lastVolumeData.id}`,
+        route: `/journals/LH/${lastVolume.id}/${lastVolumeData.id}`,
+        // value: "current",
       },
     ],
   },
@@ -202,8 +205,17 @@ export const journalSideLinks = [
 export const data = [
   {
     E_ISSN: "1118-6410",
-    journalNameShort: "EJH",
-    journalNamefull: "Elite Journal of Haematology",
+    journalNameShort: "LH",
+    journalNamefull: "Lifeline Haematology",
+    description:
+      "Get on a journey into the intricate world of blood-related disorders. Lifeline haematology is your guide to exploring the forefront of haematological research, unraveling the complexities of hematopoiesis, coagulation and the latest therapeutic interventions. Explore groundbreaking studies that pave the way for advancements in the understanding and treatment of conditions affecting the blood and related systems.",
+    journalSideLinks,
+    icon: EJH,
+  },
+  {
+    E_ISSN: "1118-6410",
+    journalNameShort: "LM",
+    journalNamefull: "Lifeline Medicine",
     description:
       "Get on a journey into the intricate world of blood-related disorders. EJH is your guide to exploring the forefront of haematological research, unraveling the complexities of hematopoiesis, coagulation and the latest therapeutic interventions. Explore groundbreaking studies that pave the way for advancements in the understanding and treatment of conditions affecting the blood and related systems.",
     journalSideLinks,
@@ -211,8 +223,8 @@ export const data = [
   },
   {
     E_ISSN: "1118-6410",
-    journalNameShort: "EJHIV",
-    journalNamefull: "Elite Journal of HIV",
+    journalNameShort: "LMS",
+    journalNamefull: "Lifeline Medical sciences",
     description:
       "Get on a journey into the intricate world of blood-related disorders. EJH is your guide to exploring the forefront of haematological research, unraveling the complexities of hematopoiesis, coagulation and the latest therapeutic interventions. Explore groundbreaking studies that pave the way for advancements in the understanding and treatment of conditions affecting the blood and related systems.",
     journalSideLinks,
@@ -220,8 +232,89 @@ export const data = [
   },
   {
     E_ISSN: "1118-6410",
-    journalNameShort: "EJM",
-    journalNamefull: "Elite Journal of Medicine",
+    journalNameShort: "LPH",
+    journalNamefull: "Lifeline Public Health",
+    description:
+      "Get on a journey into the intricate world of blood-related disorders. EJH is your guide to exploring the forefront of haematological research, unraveling the complexities of hematopoiesis, coagulation and the latest therapeutic interventions. Explore groundbreaking studies that pave the way for advancements in the understanding and treatment of conditions affecting the blood and related systems.",
+    journalSideLinks,
+    icon: EJH,
+  },
+  {
+    E_ISSN: "1118-6410",
+    journalNameShort: "LLM",
+    journalNamefull: "Lifeline laboratory Medicine",
+    description:
+      "Get on a journey into the intricate world of blood-related disorders. EJH is your guide to exploring the forefront of haematological research, unraveling the complexities of hematopoiesis, coagulation and the latest therapeutic interventions. Explore groundbreaking studies that pave the way for advancements in the understanding and treatment of conditions affecting the blood and related systems.",
+    journalSideLinks,
+    icon: EJH,
+  },
+  {
+    E_ISSN: "1118-6410",
+    journalNameShort: "LHS",
+    journalNamefull: "Lifeline Health Sciences",
+    description:
+      "Get on a journey into the intricate world of blood-related disorders. EJH is your guide to exploring the forefront of haematological research, unraveling the complexities of hematopoiesis, coagulation and the latest therapeutic interventions. Explore groundbreaking studies that pave the way for advancements in the understanding and treatment of conditions affecting the blood and related systems.",
+    journalSideLinks,
+    icon: EJH,
+  },
+  {
+    E_ISSN: "1118-6410",
+    journalNameShort: "LNHS",
+    journalNamefull: "Lifeline Nursing and Health Sciences",
+    description:
+      "Get on a journey into the intricate world of blood-related disorders. EJH is your guide to exploring the forefront of haematological research, unraveling the complexities of hematopoiesis, coagulation and the latest therapeutic interventions. Explore groundbreaking studies that pave the way for advancements in the understanding and treatment of conditions affecting the blood and related systems.",
+    journalSideLinks,
+    icon: EJH,
+  },
+  {
+    E_ISSN: "1118-6410",
+    journalNameShort: "LI",
+    journalNamefull: "Lifeline Immunology",
+    description:
+      "Get on a journey into the intricate world of blood-related disorders. EJH is your guide to exploring the forefront of haematological research, unraveling the complexities of hematopoiesis, coagulation and the latest therapeutic interventions. Explore groundbreaking studies that pave the way for advancements in the understanding and treatment of conditions affecting the blood and related systems.",
+    journalSideLinks,
+    icon: EJH,
+  },
+  {
+    E_ISSN: "1118-6410",
+    journalNameShort: "LHIV",
+    journalNamefull: "Lifeline HIV",
+    description:
+      "Get on a journey into the intricate world of blood-related disorders. EJH is your guide to exploring the forefront of haematological research, unraveling the complexities of hematopoiesis, coagulation and the latest therapeutic interventions. Explore groundbreaking studies that pave the way for advancements in the understanding and treatment of conditions affecting the blood and related systems.",
+    journalSideLinks,
+    icon: EJH,
+  },
+  {
+    E_ISSN: "1118-6410",
+    journalNameShort: "LSRR",
+    journalNamefull: "Lifeline Scientific Research and Reviews",
+    description:
+      "Get on a journey into the intricate world of blood-related disorders. EJH is your guide to exploring the forefront of haematological research, unraveling the complexities of hematopoiesis, coagulation and the latest therapeutic interventions. Explore groundbreaking studies that pave the way for advancements in the understanding and treatment of conditions affecting the blood and related systems.",
+    journalSideLinks,
+    icon: EJH,
+  },
+  {
+    E_ISSN: "1118-6410",
+    journalNameShort: "LMB",
+    journalNamefull: "Lifeline Microbiology",
+    description:
+      "Get on a journey into the intricate world of blood-related disorders. EJH is your guide to exploring the forefront of haematological research, unraveling the complexities of hematopoiesis, coagulation and the latest therapeutic interventions. Explore groundbreaking studies that pave the way for advancements in the understanding and treatment of conditions affecting the blood and related systems.",
+    journalSideLinks,
+    icon: EJH,
+  },
+  {
+    E_ISSN: "1118-6410",
+    journalNameShort: "LB",
+    journalNamefull: "Lifeline Biochemistry",
+    description:
+      "Get on a journey into the intricate world of blood-related disorders. EJH is your guide to exploring the forefront of haematological research, unraveling the complexities of hematopoiesis, coagulation and the latest therapeutic interventions. Explore groundbreaking studies that pave the way for advancements in the understanding and treatment of conditions affecting the blood and related systems.",
+    journalSideLinks,
+    icon: EJH,
+  },
+  {
+    E_ISSN: "1118-6410",
+    journalNameShort: "LE",
+    journalNamefull: "Lifeline Education",
     description:
       "Get on a journey into the intricate world of blood-related disorders. EJH is your guide to exploring the forefront of haematological research, unraveling the complexities of hematopoiesis, coagulation and the latest therapeutic interventions. Explore groundbreaking studies that pave the way for advancements in the understanding and treatment of conditions affecting the blood and related systems.",
     journalSideLinks,

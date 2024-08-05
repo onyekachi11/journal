@@ -103,7 +103,7 @@ const Sidebar = ({ sideLinks }) => {
   };
 
   return (
-    <div className="flex items-center hidden md:flex w-full">
+    <div className=" items-center hidden md:flex w-full">
       {modalOpen && (
         <Modal
           onClose={handleModalClose}

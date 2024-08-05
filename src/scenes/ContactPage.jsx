@@ -1,4 +1,4 @@
-import { NavbarAlt3, Hero4, Contact, Newsletter, Footer } from "../components";
+import { Navbar, Hero4, Contact, Newsletter, Footer } from "../components";
 
 // import { hero2 } from "../assets";
 import { Helmet } from "react-helmet";
@@ -12,7 +12,7 @@ const ContactPage = () => {
       </Helmet>
 
       <div>
-        <NavbarAlt3 />
+        <Navbar />
         <div
           className="relative flex items-center justify-center w-full 
           md:max-h-[450px] ss:max-h-[300px] max-h-[200px] md:top-[6rem] 

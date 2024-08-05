@@ -168,6 +168,8 @@ const Sidebar2 = ({ sideLinks }) => {
                                   window.location.href = submenuItem.email;
                                 } else if (submenuItem.route) {
                                   navigate(submenuItem.route);
+                                } else if (submenuItem.value) {
+                                  navigate(`/journals/${journalName}`);
                                 } else if (submenuItem.id) {
                                   handleSubItemClick(submenuItem.id);
                                 }
