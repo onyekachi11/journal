@@ -132,7 +132,7 @@ const Navbar = () => {
             ref={menuRef}
             className={`${
               toggle &&
-              "ss:mt-0 mt-0 bg-black/50 absolute top-0 right-0 z-10 flex-col w-[100%] h-screen shadow-xl"
+              "ss:mt-0 mt-0 bg-black/40 absolute top-0 right-0 z-10 flex-col w-[100%] h-screen shadow-xl"
             } 
                `}
           >
