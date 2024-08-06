@@ -21,17 +21,12 @@ import { useParams } from "react-router-dom";
 
 const A_journalPageContainer = () => {
   const { journalName, vol, issuePubs } = useParams();
+
   const journalDetails = data?.find(
     (datas) => datas?.journalNameShort === journalName
   );
 
-  console.log(
-    journalDetails &&
-      journalDetails?.journalSideLinks
-        .map((item) => item)
-        .find((value) => value.id === "archives")
-        .data.find((values) => values.id === vol)
-  );
+  console.log(journalDetails);
 
   const issuesData = journalDetails?.journalSideLinks
     .map((item) => item)

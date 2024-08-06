@@ -8,26 +8,26 @@ import { fadeIn } from "../utils/motion";
 import { BsArrowRightShort } from "react-icons/bs";
 import { data } from "../pages/data";
 import { Link } from "react-router-dom";
-data;
 
 const JournalCard = ({
-  index,
+  // index,
   description,
   journalNamefull,
   journalNameShort,
   icon,
   // route,
 }) => {
+  // console.log(data);
   return (
     <div className="xs:w-[320px] w-full grow3">
       <motion.div
-        variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
+        // variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className="w-full p-[1px] cursor-pointer 
           shadow-lg hover:shadow-xl"
       >
         <Link to={`/journals/${journalNameShort}`}>
           <div
-            options={{ max: 45, scale: 1, speed: 450 }}
+            // options={{ max: 45, scale: 1, speed: 450 }}
             className="bg-primaryalt p-1 md:pb-10 ss:pb-10 pb-8 md:gap-5 
             ss:gap-5 gap-5 flex justify-evenly items-center flex-col
             rounded-t-[20px]"
@@ -91,8 +91,9 @@ const Journals = () => {
           className="flex items-center flex-col relative 
             justify-center w-full"
         >
-          <div className="flex flex-wrap gap-12">
-            {data.map((journal, index) => (
+          <p>hello</p>
+          <div className="flex flex-wrap gap-12 ">
+            {data?.map((journal, index) => (
               <JournalCard
                 key={journal.journalNameShort}
                 index={index}

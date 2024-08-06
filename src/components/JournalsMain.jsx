@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { data } from "../pages/data";
 import { Link } from "react-router-dom";
 
-const JournalCard = ({
+const JournalCards = ({
   icon,
   description,
   journalNamefull,
@@ -144,7 +144,7 @@ const JournalCard = ({
   );
 };
 
-const Journals = () => {
+const JournalsMain = () => {
   return (
     <section
       //   className="md:min-h-[1800px] ss:min-h-[3000px] min-h-[5750px]
@@ -161,7 +161,7 @@ const Journals = () => {
         >
           <div className="grid grid-cols-2 md:gap-12 ss:gap-6 gap-10">
             {data.map((journal, index) => (
-              <JournalCard
+              <JournalCards
                 key={journal.journalNameShort}
                 index={index}
                 {...journal}
@@ -174,4 +174,4 @@ const Journals = () => {
   );
 };
 
-export default SectionWrapper(Journals, "");
+export default SectionWrapper(JournalsMain, "");
