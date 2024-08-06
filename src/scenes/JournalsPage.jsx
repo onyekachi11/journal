@@ -1,10 +1,4 @@
-import {
-  Navbar,
-  Hero3,
-  // JournalsMain,
-  Newsletter,
-  Footer,
-} from "../components";
+import { Navbar, Hero3, JournalsMain, Newsletter, Footer } from "../components";
 
 import { Helmet } from "react-helmet";
 import { hero3 } from "../assets";
@@ -38,7 +32,9 @@ const JournalsPage = () => {
           </div>
         </div>
 
-        <div className="aboutMain">{/* <JournalsMain /> */}</div>
+        <div className="aboutMain">
+          <JournalsMain />
+        </div>
 
         <div className="bg-primaryalt">
           <Newsletter />
