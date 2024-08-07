@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { BiCopyright } from "react-icons/bi";
 import { footerLinks, socialMedia } from "../constants";
-// import { logo } from "../assets";
+import { logo } from "../assets";
 import React from "react";
 
 const Footer = () => {
@@ -23,11 +23,10 @@ const Footer = () => {
           relative w-full md:gap-6 ss:gap-5 md:items-center"
           >
             <img
-              src={""}
-              // src={logo}
+              src={logo}
               alt="logo"
-              className="md:h-[120px] md:w-[120px]
-            ss:h-[100px] ss:w-[100px] h-[80px] w-[80px]"
+              className="md:h-[100px] md:w-[100px]
+            ss:h-[80px] ss:w-[80px] h-[80px] w-[80px]"
             />
 
             <p

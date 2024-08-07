@@ -22,7 +22,7 @@ const HomePage = () => {
 
       <Navbar />
 
-      <div className="hero">
+      <div className="hero fle justify-cente items-cente">
         <Hero />
       </div>
 

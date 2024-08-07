@@ -74,7 +74,7 @@ ol {
     background-image: url('./assets/hero.jpg');
     object-fit: cover;
     width: auto;
-    max-height: 90vh;
+    max-height: 100vh;
   }
 }
 

@@ -6,7 +6,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 const Hero = () => {
   return (
-    <section className="relative w-full mobile">
+    <section className="relative w-full mobile ">
       <div
         className="justify-between w-full flex flex-row 
       items-start gap-5 md:mt-36 ss:mt-56 mt-44"

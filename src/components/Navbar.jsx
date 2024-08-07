@@ -3,7 +3,7 @@ import { BsX } from "react-icons/bs";
 import styles from "../styles";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { navLinks } from "../constants";
-// import { logo } from "../assets";
+import { logo } from "../assets";
 import { Link, useNavigate } from "react-router-dom";
 import scrollToSection from "../constants/scrollToSection";
 
@@ -63,9 +63,9 @@ const Navbar = () => {
           }}
         >
           <img
-            src={""}
+            src={logo}
             alt="logo"
-            className="md:w-[80px] ss:w-[60px] w-[45px] h-auto"
+            className="md:w-[80px] ss:w-[70px] w-[45px] h-auto"
           />
         </Link>
 
@@ -113,14 +113,14 @@ const Navbar = () => {
           <div className="flex items-center z-20 ">
             {toggle ? (
               <BsX
-                size={40}
+                size={35}
                 className="object-contain cursor-pointer"
                 style={{ color: isScrolled ? "#000" : "#021e31" }}
                 onClick={() => setToggle(!toggle)}
               />
             ) : (
               <HiOutlineMenuAlt3
-                size={40}
+                size={35}
                 className="object-contain cursor-pointer"
                 style={{ color: isScrolled ? "#000" : "#021e31" }}
                 onClick={() => setToggle(!toggle)}
