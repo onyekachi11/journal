@@ -2,11 +2,11 @@
 /* eslint-disable react/prop-types */
 import { SectionWrapper } from "../hoc";
 import { motion } from "framer-motion";
-import { fadeIn } from "../utils/motion";
+// import { fadeIn } from "../utils/motion";
 // import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 // import { journals } from "../constants";
 import { BsArrowRightShort } from "react-icons/bs";
-import { data } from "../pages/data";
+import { data } from "../datas/journaldata";
 import { Link } from "react-router-dom";
 
 const JournalCard = ({
@@ -67,7 +67,7 @@ const Journals = () => {
     >
       <div className="items-center w-full flex flex-col">
         <motion.div
-          variants={fadeIn("up", "spring", 0.3)}
+          // variants={fadeIn("up", "spring", 0.3)}
           className="flex justify-between items-center w-full md:gap-12
             ss:gap-8 gap-5 md:mb-16 ss:mb-12 mb-10"
         >
@@ -91,7 +91,6 @@ const Journals = () => {
           className="flex items-center flex-col relative 
             justify-center w-full"
         >
-          <p>hello</p>
           <div className="flex flex-wrap gap-12 ">
             {data?.map((journal, index) => (
               <JournalCard

@@ -5,7 +5,6 @@ import {
   Footer,
   Sidebar,
   Sidebar2,
-  // NavbarPages,
   Navbar,
   A_JournalHero,
   VolumeIssues,
@@ -16,7 +15,7 @@ import styles from "../styles";
 
 import { hero3 } from "../assets";
 import { Helmet } from "react-helmet";
-import { data } from "../pages/data";
+import { data } from "../datas/journaldata";
 import { useParams } from "react-router-dom";
 
 const A_journalPageContainer = () => {

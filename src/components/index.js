@@ -1,8 +1,4 @@
 import Navbar from "./Navbar";
-import NavbarAlt from "./NavbarAlt";
-import NavbarAlt2 from "./NavbarAlt2";
-import NavbarAlt3 from "./NavbarAlt3";
-import NavbarPages from "./NavbarPages";
 import A_JournalHero from "./A_JournalHero";
 import A_journalPageContainer from "./A_journalPageContainer";
 import VolumeIssues from "./VolumeIssues";
@@ -25,10 +21,6 @@ import Sidebar2 from "./Sidebar2";
 
 export {
   Navbar,
-  NavbarAlt,
-  NavbarAlt2,
-  NavbarAlt3,
-  NavbarPages,
   A_JournalHero,
   A_journalPageContainer,
   VolumeIssues,

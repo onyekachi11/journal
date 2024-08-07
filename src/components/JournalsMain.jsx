@@ -5,7 +5,7 @@ import { SectionWrapper } from "../hoc";
 import { motion } from "framer-motion";
 // import { fadeIn } from '../utils/motion';
 // import { journals } from "../constants";
-import { data } from "../pages/data";
+import { data } from "../datas/journaldata";
 import { Link } from "react-router-dom";
 
 const JournalCards = ({
