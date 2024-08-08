@@ -70,7 +70,7 @@ const Contact = () => {
           "template_bjv8tlu",
           {
             from_name: `${values.firstname} ${values.lastname}`,
-            to_name: "Elite Press Journals",
+            to_name: "Lifeline Journals",
             from_email: values.email,
             to_email: "contact@epjournals.com",
             subject: values.subject,

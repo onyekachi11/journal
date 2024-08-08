@@ -7,17 +7,17 @@ import {
   Footer,
 } from "../components";
 
-// import { hero2 } from "../assets";
+import { hero3 } from "../assets";
 import { Helmet } from "react-helmet";
 
 const AboutPage = () => {
   return (
     <div className="font-instrument-sans">
       <Helmet>
-        <title>About Us | Elite Press Journals</title>
+        <title>About Us | Lifeline Journals</title>
         <meta
           name="description"
-          content="At Elite Press, we are committed to disseminating cutting-edge research through our comprehensive range of medical journals. "
+          content="At Lifeline, we are committed to disseminating cutting-edge research through our comprehensive range of medical journals. "
         />
       </Helmet>
 
@@ -28,8 +28,7 @@ const AboutPage = () => {
       ss:top-[6rem] top-[4.8rem]"
       >
         <img
-          src={""}
-          // src={hero2}
+          src={hero3}
           alt="hero2"
           className="w-[120rem] md:h-[300px] ss:h-[250px]
         h-[150px]"

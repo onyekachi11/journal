@@ -1,5 +1,5 @@
 import { SectionWrapper } from "../hoc";
-// import { heroImg } from "../assets";
+import { heroImage } from "../assets";
 import { layout } from "../styles";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -9,7 +9,7 @@ const Hero = () => {
     <section className="relative w-full mobile ">
       <div
         className="justify-between w-full flex flex-row 
-      items-start gap-5 md:mt-36 ss:mt-56 mt-44"
+      items-center gap-10 md:mt-36 ss:mt-56 mt-44"
       >
         <div className={`${layout.sectionInfo}`}>
           <motion.div variants={textVariant()}>
@@ -19,9 +19,10 @@ const Hero = () => {
               ss:leading-[55px] leading-[45px] tracking-tight 
               md:max-w-[750px] ss:max-w-[600px]"
             >
-              Empowering <span className="text-main">medical minds, </span>
-              advancing{" "}
-              <span className="text-main">scientific frontiers. </span>
+              Empower your medical expertise,{" "}
+              {/* <span className="text-main">medical minds, </span>
+              advancing{" "} */}
+              <span className="text-main">push scientific boundaries. </span>
             </h1>
           </motion.div>
 
@@ -31,10 +32,9 @@ const Hero = () => {
               ss:text-[20px] text-[14px] md:max-w-[600px] ss:max-w-[480px]
               max-w-[320px] font-medium md:leading-[25px] ss:leading-[26px]"
             >
-              Explore the pinnacle of medical knowledge with Elite Press.
-              Elevate your understanding of medical sciences through our
-              meticulously crafted publications, authored by leading experts in
-              their fields.
+              Discover the forefront of medical knowledge with Lifeline. Enhance
+              your grasp of medical sciences with our expertly crafted
+              publications, written by the foremost authorities in their fields.
             </p>
           </motion.div>
 
@@ -72,7 +72,13 @@ const Hero = () => {
           variants={fadeIn("left", "spring", 0.3)}
           className="md:flex hidden justify-end"
         >
-          <img src={""} alt="heroImage" className="h-[600px] w-auto" />
+          <div className="w-[550px]">
+            <img
+              src={heroImage}
+              alt="heroImage"
+              className="w-[100%] rounded-[90px] "
+            />
+          </div>
         </motion.div>
       </div>
     </section>

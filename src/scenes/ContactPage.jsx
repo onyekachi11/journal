@@ -1,13 +1,13 @@
 import { Navbar, Hero4, Contact, Newsletter, Footer } from "../components";
 
-// import { hero2 } from "../assets";
+import { hero3 } from "../assets";
 import { Helmet } from "react-helmet";
 
 const ContactPage = () => {
   return (
     <div className="font-instrument-sans">
       <Helmet>
-        <title>Contact Us | Elite Press Journals</title>
+        <title>Contact Us | Lifeline Journals</title>
         <meta name="description" content="Get in touch with us" />
       </Helmet>
 
@@ -19,9 +19,8 @@ const ContactPage = () => {
           ss:top-[6rem] top-[4.8rem]"
         >
           <img
-            // src={hero2}
-            src={""}
-            alt="hero4"
+            src={hero3}
+            alt="hero3"
             className="w-[120rem] md:h-[300px] ss:h-[250px]
             h-[150px]"
           />

@@ -92,7 +92,7 @@ const Journals = () => {
             justify-center w-full"
         >
           <div className="flex flex-wrap gap-12 items-center justify-center ">
-            {data?.slice(0, 4).map((journal, index) => (
+            {data?.slice(0, 3).map((journal, index) => (
               <JournalCard
                 key={journal.journalNameShort}
                 index={index}

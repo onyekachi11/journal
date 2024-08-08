@@ -7,7 +7,7 @@ const JournalsPage = () => {
   return (
     <div className="font-instrument-sans">
       <Helmet>
-        <title>Journals | Elite Press Journals</title>
+        <title>Journals | Lifeline Journals</title>
         <meta
           name="description"
           content="Each publication is meticulously curated to contribute to the progress of various disciplines within the medical field."

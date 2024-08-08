@@ -35,7 +35,7 @@ const Footer = () => {
             md:mt-0 ss:mt-3 mt-6 md:leading-[25px] ss:leading-[22px] 
             leading-[20px]"
             >
-              At Elite Press, we are committed to disseminating cutting-edge
+              At Lifeline, we are committed to disseminating cutting-edge
               research through our comprehensive range of medical journals. Each
               publication is carefully curated to contribute to the progress of
               various disciplines within the medical field.
@@ -122,7 +122,7 @@ const Footer = () => {
             className="md:text-[16px] ss:text-[16px] text-[14px] 
           text-main md:mt-1 ss:mt-1 mt-0.5"
           >
-            2024 | Elite Press | All Rights Reserved.
+            2024 | Lifeline | All Rights Reserved.
           </p>
         </div>
       </motion.div>

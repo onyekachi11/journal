@@ -8,7 +8,16 @@ import { fadeIn, textVariant } from "../utils/motion";
 // import { useParams } from "react-router-dom";
 // import { Ejhvol2iss1 } from "../constants";
 
-const Publication = ({ pages, abstract, title, authors, route }) => {
+const Publication = ({
+  pages,
+  abstract,
+  title,
+  authors,
+  route,
+  journalName,
+  volumeName,
+  issue,
+}) => {
   return (
     <motion.div
       variants={textVariant}
@@ -67,7 +76,7 @@ const Publication = ({ pages, abstract, title, authors, route }) => {
             className="text-textalt md:text-[14px] ss:text-[13px] 
                     text-[12px]"
           >
-            Elite Journal of Haematology
+            {journalName}
           </p>
 
           <p
@@ -81,7 +90,7 @@ const Publication = ({ pages, abstract, title, authors, route }) => {
             className="text-textalt md:text-[14px] ss:text-[13px] 
                     text-[12px]"
           >
-            Volume 2, Issue 1, 2024
+            {`${volumeName}, ${issue}`}
           </p>
 
           <p
@@ -103,8 +112,10 @@ const Publication = ({ pages, abstract, title, authors, route }) => {
   );
 };
 
-const IssuePubs = ({ issueDetails }) => {
+const IssuePubs = ({ issueDetails, journalName, volumeName }) => {
   const isMobile = window.innerWidth <= 620;
+
+  console.log(issueDetails);
 
   const [currentPage, setCurrentPage] = useState(() => {
     const savedPage = parseInt(localStorage.getItem("currentPage"));
@@ -149,6 +160,9 @@ const IssuePubs = ({ issueDetails }) => {
             {currentItems.map((item, index) => (
               <Publication
                 key={item.title}
+                journalName={journalName}
+                volumeName={volumeName}
+                issue={issueDetails.name}
                 index={startIndex + index + 1}
                 {...item}
               />

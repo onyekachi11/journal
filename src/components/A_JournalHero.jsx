@@ -84,7 +84,7 @@ const A_JournalHero = ({
           className="text-main md:text-[18px] ss:text-[15px] 
                     text-[13px] font-light md:flex hidden"
         >
-          Elite Press Journals
+          Lifeline Journals
         </p>
       </motion.div>
     </section>

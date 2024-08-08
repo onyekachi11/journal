@@ -33,6 +33,14 @@ const A_journalPageContainer = () => {
     .data.find((values) => values.id === vol)
     ?.volumeData.find((data) => data.id === issuePubs);
 
+  const volumeName = journalDetails?.journalSideLinks
+    .map((item) => item)
+    .find((value) => value.id === "archives")
+    .data.find((values) => values.id === vol)?.name;
+  // ?.volumeData.find((data) => data.id === issuePubs);
+
+  console.log(volumeName);
+
   const {
     E_ISSN,
     journalNamefull,
@@ -105,7 +113,11 @@ const A_journalPageContainer = () => {
             ) : journalName && issuePubs == undefined ? (
               <VolumeIssues journalDetails={journalDetails.journalSideLinks} />
             ) : journalName && issuePubs ? (
-              <IssuePubs issueDetails={issuesData} />
+              <IssuePubs
+                issueDetails={issuesData}
+                journalName={journalNamefull}
+                volumeName={volumeName}
+              />
             ) : null}
           </div>
 

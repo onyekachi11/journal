@@ -39,11 +39,16 @@ const Commitment = () => {
                     text-[14px] max-w-[700px] text-center md:leading-[27px] 
                     ss:leading-[28px] leading-[20px]"
             >
-              At Elite Press, we stand at the forefront of promoting academic
-              excellence, scientific rigour and collaboration within the medical
-              community. Our commitment to providing a platform for knowledge
-              exchange and fostering a community of experts drives the success
-              of our journals.
+              Whether you are a researcher, clinician, educator, or student,
+              Lifeline aims to be an indispensable resource for deepening your
+              understanding of the complex, ever-evolving world of health
+              sciences. We welcome submissions from scholars and practitioners
+              at all stages of their careers.
+              <br />
+              Our mission is to advance knowledge and spark interdisciplinary
+              dialogue in the health sciences community. We are committed to
+              publishing high-quality, impactful research that has the potential
+              to improve patient outcomes and enhance clinical practice.
             </p>
 
             <p
@@ -51,9 +56,8 @@ const Commitment = () => {
                     text-[14px] max-w-[700px] text-center md:leading-[28px] 
                     ss:leading-[28px] leading-[20px] mt-5"
             >
-              Join us on this journey of exploration, discovery and innovation.
-              Together, let's shape the future of healthcare through the power
-              of knowledge.
+              Join us as we explore the frontiers of medical knowledge and work
+              towards a future of better health for all.
             </p>
           </motion.div>
         </motion.div>

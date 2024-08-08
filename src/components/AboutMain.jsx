@@ -1,4 +1,5 @@
-// import { heroImg2 } from "../assets";
+/* eslint-disable react/no-unescaped-entities */
+import { sthetoscope } from "../assets";
 import { layout } from "../styles";
 import { motion } from "framer-motion";
 import { slideIn, textVariant } from "../utils/motion";
@@ -35,12 +36,16 @@ const AboutMain = () => {
                     ss:text-[18px] text-[14px] md:max-w-[650px] ss:max-w-[700px]
                     md:leading-[27px] ss:leading-[25px] leading-[20px]"
             >
-              Welcome to Elite Press, a distinguished platform dedicated to
-              advancing medical knowledge and fostering excellence in
-              healthcare. At Elite Press, we are committed to disseminating
-              cutting-edge research through our comprehensive range of medical
-              journals. Each publication is meticulously curated to contribute
-              to the progress of various disciplines within the medical field.
+              Lifeline is a leading peer-reviewed journal covering the latest
+              research and innovations across the health sciences. Published
+              quarterly, Lifeline features original research, review articles,
+              and topical discussions on a wide range of topics.
+              <br /> In each issue, Lifeline delves into a range of topics that
+              impact our overall health and wellness. From the latest
+              advancements in fields like haematology, immunology, and
+              microbiology, to timely discussions on public health, medical
+              sciences, and nursing - our content covers the full breadth of the
+              health sciences.
             </p>
 
             <p
@@ -48,13 +53,11 @@ const AboutMain = () => {
                     ss:text-[18px] text-[14px] md:max-w-[650px] ss:max-w-[700px]
                     md:leading-[27px] ss:leading-[25px] leading-[20px]"
             >
-              Our mission is to empower medical professionals, researchers and
-              academicians by providing a dynamic platform for the dissemination
-              of groundbreaking medical research. Elite Press welcomes
-              collaboration with researchers, institutions and industry
-              partners. Whether you are looking to publish groundbreaking
-              research or explore partnership opportunities, we invite you to
-              join us in shaping the future of medical knowledge.
+              Lifeline is overseen by an esteemed editorial board of leading
+              experts across medical, scientific, and academic fields. Adhering
+              to the highest standards of peer review, we strive to provide our
+              readers with authoritative, evidence-based insights they can
+              trust.
             </p>
           </motion.div>
 
@@ -63,8 +66,7 @@ const AboutMain = () => {
             className="md:mt-10 ss:mt-6 mt-2"
           >
             <img
-              src={""}
-              //   src={heroImg2}
+              src={sthetoscope}
               alt="cloth"
               className="md:h-[500px] ss:h-[400px] h-[300px] w-auto"
             />

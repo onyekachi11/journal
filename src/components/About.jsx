@@ -1,8 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
 import { SectionWrapper } from "../hoc";
 import { layout } from "../styles";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
-// import { aboutImg } from "../assets";
+import { aboutImg } from "../assets";
 
 const About = () => {
   return (
@@ -24,7 +25,7 @@ const About = () => {
                     ss:text-[45px] text-[33px] md:mr-14 ss:mr-6 mr-5
                     md:leading-[2px] ss:leading-[2px] leading-[40px]"
           >
-            About Elite Press
+            About Lifeline
           </h1>
           <motion.div
             variants={fadeIn("down", "spring", 0.3)}
@@ -40,7 +41,7 @@ const About = () => {
         <motion.div
           variants={fadeIn("down", "spring", 0.3)}
           className="flex md:flex-row ss:flex-row flex-col md:gap-10 
-                ss:gap-10 gap-12 w-full aboutimage"
+                ss:gap-12 gap-12 w-full   items-center justify-center"
         >
           <motion.div
             variants={textVariant()}
@@ -51,12 +52,11 @@ const About = () => {
                         text-[13px] md:max-w-[700px] ss:max-w-[400px]  
                         md:leading-[23px]"
             >
-              Welcome to Elite Press, a distinguished platform dedicated to
-              advancing medical knowledge and fostering excellence in
-              healthcare. At Elite Press, we are committed to disseminating
-              cutting-edge research through our comprehensive range of medical
-              journals. Each publication is carefully curated to contribute to
-              the progress of various disciplines within the medical field.
+              Lifeline is a quarterly health and wellness journal dedicated to
+              helping our readers live their healthiest, most vibrant lives.
+              Launched in 2020, Lifeline was founded on the principle that true
+              health is about more than just physical fitness - it's a holistic
+              state of wellbeing that encompasses the mind, body, and spirit.
             </p>
 
             <p
@@ -64,11 +64,11 @@ const About = () => {
                         text-[13px] md:max-w-[700px] ss:max-w-[400px] 
                         md:mt-5 ss:mt-5 mt-5 md:leading-[23px]"
             >
-              We stand at the forefront of promoting academic excellence,
-              scientific rigor and collaboration within the medical community.
-              Our commitment to providing a platform for knowledge exchange and
-              fostering a community of experts drives the success of our
-              journals.
+              Lifeline is written and edited by a team of health practitioners,
+              scientists, and wellness experts who are passionate about
+              empowering our readers to take charge of their wellbeing. We're
+              here to share the latest research, spotlight innovative approaches
+              to care, and amplify diverse voices in the health space.
             </p>
 
             <a href="/about" className="md:mt-8 ss:mt-8 mt-6">
@@ -83,13 +83,11 @@ const About = () => {
             </a>
           </motion.div>
 
-          <motion.div variants={fadeIn("left", "spring", 0.3)}>
-            <img
-              src={""}
-              //   src={aboutImg}
-              alt="about"
-              className="md:h-[400px] ss:h-[300px] w-auto"
-            />
+          <motion.div
+            variants={fadeIn("left", "spring", 0.3)}
+            className=" w-[250px] md:w-[350px] "
+          >
+            <img src={aboutImg} alt="about" className="rounded-lg" />
           </motion.div>
         </motion.div>
       </div>

@@ -2,7 +2,7 @@ import { layout } from "../styles";
 import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
-import { BsArrowRightShort } from "react-icons/bs";
+// import { BsArrowRightShort } from "react-icons/bs";
 
 const Hero2 = () => {
   return (
@@ -11,16 +11,16 @@ const Hero2 = () => {
         <motion.div
           variants={textVariant()}
           className={`${layout.sectionInfo} justify-center 
-              items-center`}
+              items-start`}
         >
           <h1
-            className="text-secondary font-bold md:text-[65px]
+            className="text-secondary font-bold md:text-[90px]
                 ss:text-[65px] text-[40px] tracking-tight"
           >
             About Us
           </h1>
 
-          <div
+          {/* <div
             className="flex flex-row items-center md:gap-3 
                 ss:gap-5 gap-2 text-white md:text-[20px] ss:text-[20px] 
                 text-[14px] justify-center"
@@ -31,7 +31,7 @@ const Hero2 = () => {
                   ss:text-[30px] text-[25px] text-white"
             />
             <p>About Us</p>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </section>
